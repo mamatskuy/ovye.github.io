@@ -11,14 +11,16 @@ body {
   min-height: 100vh;
 }
 
+/* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 90px 20px;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
 .subtitle {
@@ -26,14 +28,21 @@ body {
   opacity: 0.85;
 }
 
+/* CARD */
 .card {
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(14px);
   max-width: 900px;
-  margin: 25px auto;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  margin: 30px auto;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
 }
 
 .card h2 {
@@ -41,29 +50,54 @@ body {
   color: #ffd369;
 }
 
-.card p, .card li, table {
+.card p, .card li {
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 ul {
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+.hobby-list li {
+  margin-bottom: 8px;
 }
 
-td {
-  padding: 10px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px;
   font-size: 0.9rem;
   opacity: 0.7;
 }
+
+/* ✨ ANIMATIONS ✨ */
+.fade-in {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
